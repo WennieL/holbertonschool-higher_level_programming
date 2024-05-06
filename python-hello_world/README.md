@@ -18,9 +18,9 @@
   - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/4-print_float.py)
   - Output format: `Float: <number with 2 digits>`
 
-### 3. Print string
+### [3. Print string](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-hello_world/5-print_string.py)
 - Complete this source code in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
-  - You can find the source code [here](link-to-source-code)
+  - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/5-print_string.py)
   - Output format: 
     ```
     3 times the value of str
