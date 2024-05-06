@@ -13,9 +13,9 @@
   - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/3-print_number.py)
   - Output format: `<number> Battery street`
 
-### 2. Print float
+### [2. Print float]()
 - Complete the source code to print the float stored in the variable `number` with a precision of 2 digits.
-  - You can find the source code [here](link-to-source-code)
+  - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/4-print_float.py)
   - Output format: `Float: <number with 2 digits>`
 
 ### 3. Print string
