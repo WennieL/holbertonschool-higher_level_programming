@@ -37,11 +37,11 @@
 - Complete this source code to manipulate strings.
   - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/7-edges.py)
 
-### [6. Create a new sentence]()
+### [6. Create a new sentence](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-hello_world/8-concat_edges.py)
 - Complete this source code to print "object-oriented programming with Python", followed by a new line.
   - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/8-concat_edges.py)
 
-### [7. Easter Egg]()
+### [7. Easter Egg](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-hello_world/9-easter_egg.py)
 - Write a Python script that prints “The Zen of Python”, by Tim Peters, followed by a new line.
   - Your script should be maximum 98 characters long.
 
