@@ -24,12 +24,14 @@
   - Output format: 
     ```
     3 times the value of str
+    Holberton SchoolHolberton SchoolHolberton School
     <9 first characters of str>
+    Holberton
     ```
 
-### 4. Play with strings
+### [4. Play with strings]()
 - Complete this source code to print "Welcome to Holberton School!"
-  - You can find the source code [here](link-to-source-code)
+  - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/6-concat.py)
 
 ### 5. Copy - Cut - Paste
 - Complete this source code to manipulate strings.
