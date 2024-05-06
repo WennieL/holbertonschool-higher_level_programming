@@ -29,13 +29,13 @@
     Holberton
     ```
 
-### [4. Play with strings]()
+### [4. Play with strings](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-hello_world/6-concat.py)
 - Complete this source code to print "Welcome to Holberton School!"
   - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/6-concat.py)
 
-### 5. Copy - Cut - Paste
+### [5. Copy - Cut - Paste](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-hello_world/7-edges.py)
 - Complete this source code to manipulate strings.
-  - You can find the source code [here](link-to-source-code)
+  - You can find the source code [here](https://github.com/hs-hq/0x00.py/blob/main/7-edges.py)
 
 ### 6. Create a new sentence
 - Complete this source code to print "object-oriented programming with Python", followed by a new line.
