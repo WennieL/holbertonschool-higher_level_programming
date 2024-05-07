@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-for num in range(0, 10):
+for num in range(1, 10):
     print("{:02}".format(num), end=", ")
 
 for num in range(10, 90):
