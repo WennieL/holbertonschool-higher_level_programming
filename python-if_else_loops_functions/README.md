@@ -8,10 +8,12 @@
 
 ### [0. Positive anything is better than negative nothing](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/0-positive_or_negative.py)
 - This program will assign a random signed number to the variable `number` each time it is executed. Complete the source code in order to print whether the `number` stored in the variable number is positive or negative.
-- You can find the source code [here](https://github.com/hs-hq/0x01.py/blob/main/0-positive_or_negative_py)
+  - You can find the source code [here](https://github.com/hs-hq/0x01.py/blob/main/0-positive_or_negative_py)
 
 ### [1. The last digit](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/1-last_digit.py)
 This program will assign a random signed number to the variable `number` each time it is executed. Complete the source code in order to print the last digit of the `number` stored in the variable number.
+    - You can find the source code [here](https://github.com/hs-hq/0x01.py/blob/main/1-last_digit_py)
+    
 
 ### [2. I sometimes suffer from insomnia. ](https://github.com/WennieL/holbertonschool-higher_level_programming/blob/master/python-if_else_loops_functions/2-print_alphabet.py)
 Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
