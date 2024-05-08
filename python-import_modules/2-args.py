@@ -7,7 +7,7 @@ if __name__ == "__main__":
     if num_args == 1:
         print("0 argument")
     elif num_args == 2:
-        print("1 argument")
+        print("1 argument:")
         print("1: {}".format(sys.argv[1]))
     else:
         print("{} arguments:".format(num_args - 1))
