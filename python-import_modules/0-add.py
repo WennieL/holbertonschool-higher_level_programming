@@ -5,3 +5,6 @@ if __name__ == "__main__":
     a = 1
     b = 2
     print("{} + {} = {}".format(a, b, add(a, b)))
+# print(__name__)
+# return: add_0
+# and then return: 1 + 2 = 3
