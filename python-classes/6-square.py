@@ -44,20 +44,26 @@ class Square:
             print("")
         else:
             for _ in range(self.size):
-                if self.position[0] > 0:
-                    print("_" * self.position[0], end="")
-                print("#" * self.size)
+                print("_" * self.position[0] + "#" * self.size)
 
     @property
     def position(self):
-        '''getter the position for the #'''
+        '''getter the position for the Square'''
         return self.__position
 
     @position.setter
     def position(self, value):
-        '''Raisers:
-        TypeError: if position is not a tuple of 2 positive integers
+        '''Setter for the position of the Square with validation.
+
+        Args:
+            value(tuple): The position ar which to start printing the square.
+
+        Raisers:
+            TypeError: if position is not a tuple of 2 positive integers
         '''
+        if not isinstance(value, tuple):
+            raise TypeError(
+                "position must be a tuple of 2 positive integers")
         if len(value) != 2:
             raise TypeError(
                 "position must be a tuple of 2 positive integers")
@@ -65,9 +71,6 @@ class Square:
             raise TypeError(
                 "position must be a tuple of 2 positive integers")
         if any(num < 0 for num in value):
-            raise TypeError(
-                "position must be a tuple of 2 positive integers")
-        if not isinstance(value, tuple):
             raise TypeError(
                 "position must be a tuple of 2 positive integers")
 
