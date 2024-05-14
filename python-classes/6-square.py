@@ -41,10 +41,12 @@ class Square:
         If size is 0, it prints an empty line.
         '''
         if self.size == 0:
-            print()
-        else:
-            for _ in range(self.size):
-                print(" " * self.position[0], end="" + "#" * self.__size)
+            print("")
+
+        print("" * self.__position[1], end="")
+
+        for _ in range(self.size):
+            print("_" * self.__position[0] + "#" * self.__size)
 
     @property
     def position(self):
