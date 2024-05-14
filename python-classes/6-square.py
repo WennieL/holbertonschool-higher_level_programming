@@ -41,12 +41,10 @@ class Square:
         If size is 0, it prints an empty line.
         '''
         if self.size == 0:
-            print("")
-
-        print("" * self.__position[1], end="")
-
-        for _ in range(self.size):
-            print("_" * self.__position[0] + "#" * self.__size)
+            print()
+        else:
+            for _ in range(self.size):
+                print(" " * self.position[0], end="" + "#" * self.__size)
 
     @property
     def position(self):
@@ -63,16 +61,9 @@ class Square:
         Raisers:
             TypeError: if position is not a tuple of 2 positive integers
         '''
-        if not isinstance(value, tuple):
-            raise TypeError(
-                "position must be a tuple of 2 positive integers")
-        if len(value) != 2:
-            raise TypeError(
-                "position must be a tuple of 2 positive integers")
-        if not all(isinstance(num, int) for num in value):
-            raise TypeError(
-                "position must be a tuple of 2 positive integers")
-        if any(num < 0 for num in value):
+        if not isinstance(value, tuple) or len(value) != 2 \
+                or not all(isinstance(num, int) for num in value) \
+                or value[0] < 0 or value[1] < 0:
             raise TypeError(
                 "position must be a tuple of 2 positive integers")
 
