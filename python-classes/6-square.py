@@ -43,10 +43,10 @@ class Square:
         if self.size == 0:
             print("")
 
-        print("\n" * self.position[1], end="")
+        print("" * self.__position[1], end="")
 
         for _ in range(self.size):
-            print("_" * self.position[0] + "#" * self.size)
+            print("_" * self.__position[0] + "#" * self.__size)
 
     @property
     def position(self):
