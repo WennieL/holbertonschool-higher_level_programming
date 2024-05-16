@@ -15,3 +15,18 @@ def roman_to_int(roman_string):
     }
 
     total = 0
+    pre_value = 0
+
+    for char in reversed(roman_string):
+        if char not in roman_num:
+            return 0
+
+        current_value = roman_num[char]
+
+        if current_value < pre_value:
+            total -= current_value
+        else:
+            total += current_value
+
+        pre_value = current_value
+    return total
