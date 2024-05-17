@@ -49,10 +49,10 @@ Tests:
     >>> add_integer(1, float("inf"))
     Traceback (most recent call last):
     ...
-     OverflowError: cannot convert float infinity to integer
+    OverflowError: cannot convert float infinity to integer
 
-     Test - cannot convert float NaN to integer
-     >>> add_integer(1, int("NaN"))
-      Traceback (most recent call last):
+    Test - cannot convert float NaN to integer
+    >>> add_integer(1, int("NaN"))
+     Traceback (most recent call last):
       ...
-      ValueError: invalid literal for int() with base 10: 'NaN'
+    ValueError: invalid literal for int() with base 10: 'NaN'
