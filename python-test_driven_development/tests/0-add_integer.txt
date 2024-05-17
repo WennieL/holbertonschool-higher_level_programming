@@ -44,3 +44,15 @@ Tests:
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
+
+    Test - float overflow
+    >>> add_integer(1, float("inf"))
+    Traceback (most recent call last):
+    ...
+     OverflowError: cannot convert float infinity to integer
+
+     Test - cannot convert float NaN to integer
+     >>> add_integer(1, int("NaN"))
+      Traceback (most recent call last):
+      ...
+      ValueError: invalid literal for int() with base 10: 'NaN'
