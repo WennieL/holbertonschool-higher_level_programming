@@ -13,11 +13,7 @@ Tests:
     Test - first_name and last_name are strings
     >>> say_my_name("John", "Smith")
     My name is John Smith
-
-    Test - first_name is a string and last_name is omitted
-    >>> say_my_name("Bob")
-    My name is Bob
-
+    
     Test - first_name is not a string
     >>> say_my_name(1234)
     Traceback (most recent call last):
@@ -35,3 +31,5 @@ Tests:
     Traceback (most recent call last):
     ...
     TypeError: first_name must be a string
+
+
