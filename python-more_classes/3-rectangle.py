@@ -27,10 +27,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
 
-        my_rectan = ""
-        for _ in range(self.height):
-            my_rectan += self.width * "#" + "\n"
-        return my_rectan
+        my_rectangle = ""
+        for i in range(self.height):
+            my_rectangle += self.width * "#"
+            if i < self.height - 1:
+                my_rectangle += "\n"
+        return my_rectangle
 
     @property
     def width(self):
