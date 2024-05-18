@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is rectangle module that contain an empty class Rectangle 
+This is rectangle module that contain an empty class Rectangle
 """
 
 
