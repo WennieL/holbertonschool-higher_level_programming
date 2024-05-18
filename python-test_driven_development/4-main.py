@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 print_square = __import__('4-print_square').print_square
 
+print_square()
+print("")
 print_square("hey")
 print("")
 print_square(-2.5)

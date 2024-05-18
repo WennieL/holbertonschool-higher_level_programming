@@ -44,4 +44,11 @@ Tests:
     Test - size is equal to zero
     >>> print_square(0)
 
+    Test - missing one argument
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+
     
