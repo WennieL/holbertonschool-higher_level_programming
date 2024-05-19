@@ -34,7 +34,7 @@ Tests:
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
 
-    theest - mixed positive, negative and large numbers
+    Test - mixed positive, negative and large numbers
     >>> my_list = MyList()
     >>> my_list.append(-1)
     >>> my_list.append(0)
@@ -45,3 +45,10 @@ Tests:
     [-1, 0, -2, 3, 500000]
     >>> my_list.print_sorted()
     [-2, -1, 0, 3, 500000]
+
+    Test - empty list
+    >>> my_list = MyList()
+    >>> print(my_list)
+    []
+    >>> my_list.print_sorted()
+    []
