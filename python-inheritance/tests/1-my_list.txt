@@ -1,0 +1,47 @@
+The ``print_sorted`` module
+==========================
+
+Using class ``MyList``
+-------------------
+
+First import ``MyList`` from the ``1-my_list``module:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Tests:
+
+    Test - positive numbers
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+    Test - negative numbers
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(-2)
+    >>> my_list.append(-3)
+    >>> my_list.append(-5)
+    >>> print(my_list)
+    [-1, -4, -2, -3, -5]
+    >>> my_list.print_sorted()
+    [-5, -4, -3, -2, -1]
+
+    theest - mixed positive, negative and large numbers
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(0)
+    >>> my_list.append(-2)
+    >>> my_list.append(3)
+    >>> my_list.append(500000)
+    >>> print(my_list)
+    [-1, 0, -2, 3, 500000]
+    >>> my_list.print_sorted()
+    [-2, -1, 0, 3, 500000]
