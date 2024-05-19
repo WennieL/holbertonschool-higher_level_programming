@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''This module is to lookup the available 
+'''This module is to lookup the available
 attributes and methods of an object '''
 
 
