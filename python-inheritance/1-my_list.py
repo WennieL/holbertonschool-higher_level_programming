@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''
-This module defines a subclass of the built-in list, providing additional functionality to print the list in sorted order.
+This module defines a subclass of the built-in list,
+providing additional functionality to print the list in sorted order.
 '''
 
 
