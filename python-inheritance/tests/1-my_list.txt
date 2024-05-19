@@ -33,6 +33,8 @@ Tests:
     [-1, -4, -2, -3, -5]
     >>> my_list.print_sorted()
     [-5, -4, -3, -2, -1]
+    >>> print(my_list)
+    [-1, -4, -2, -3, -5]
 
     Test - mixed positive, negative and large numbers
     >>> my_list = MyList()
@@ -52,3 +54,4 @@ Tests:
     []
     >>> my_list.print_sorted()
     []
+
