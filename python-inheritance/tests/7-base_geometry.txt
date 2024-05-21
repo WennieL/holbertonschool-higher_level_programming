@@ -1,45 +1,72 @@
-The ``integer_validator`` module
+The ``BaseGeometry`` module
 ======================
 
-Using ``integer_validator`` 
+Using class ``BaseGeometry`` 
 -------------------
 
-First import ``integer_validator`` from the ``7-base_geometry`` file:
-    >>> integer_validator = __import__('7-base_geometry').integer_validator
+First import ``BaseGeometry`` from the ``7-base_geometry`` module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
 
 Tests:
 
-    Test - value is a positive integer
-        >>> integer_validator("my_int", 12)
+
+Test for positive, negative and 0 integer
+
+    Test - checking passing a "negative integer"
+    	>>> bg.integer_validator("distance", -4)
         Traceback (most recent call last):
         ...
-        NameError: name 'e' is not defined
+        ValueError: distance must be greater than 0
     
-    Test - value is a negative integer
-        >>> integer_validator("my_int", -12)
-        Traceback (most recent call last):
-        ...
-        ValueError: my_int must be greater than 0
-
-    Test - value is a string
-        >>> integer_validator("my_int", "hey")
-        Traceback (most recent call last):
-        ...
-        TypeError: my_int must be an integer
+    Test - checking passing a "positive integer"
+    	>>> bg.integer_validator("my_int", 12)
     
-    Test - value is 0
-        >>> integer_validator("my_int", 0)
+    Test - checking passing value an "interger of 0"
+    	>>> bg.integer_validator("age", 0)
         Traceback (most recent call last):
         ...
-        raise ValueError(f"{name} must be greater than 0")
+        ValueError: age must be greater than 0
+
     
-    Test - value is infinete 
-        >>> integer_validator("my_int", "inf")
+Test for different data structure
+
+    Test - checking passing value a "set"
+        >>> bg.integer_validator("age", {3, 4})
         Traceback (most recent call last):
         ...
-        TypeError: my_int must be an integer
+        TypeError: age must be an integer
+
+        Test - checking passing value a "tuple" with one value
+        >>> bg.integer_validator("age", (4,))
+        Traceback (most recent call last):
+        ...
+        TypeError: age must be an integer
+
+        Test - checking passing value a stirng
+    	>>> bg.integer_validator("name", "John")
+        Traceback (most recent call last):
+        ...
+        TypeError: name must be an integer
 
 
+Testing passing value with "string", "None", "bool", "missing one value"
 
+    Test - checking a value is None
+        >>> bg.integer_validator("age", None)
+        Traceback (most recent call last):
+        ...
+        TypeError: age must be an integer
+    
+    Test - checking passing value a bool(True)
+        >>> bg.integer_validator("age", True)
+        Traceback (most recent call last):
+        ...
+        TypeError: age must be an integer
 
+    Test - checking missing value argument
+        >>> bg.integer_validator("age")
+        Traceback (most recent call last):
+        ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
 
