@@ -1,0 +1,45 @@
+The ``integer_validator`` module
+======================
+
+Using ``integer_validator`` 
+-------------------
+
+First import ``integer_validator`` from the ``7-base_geometry`` file:
+    >>> integer_validator = __import__('7-base_geometry').integer_validator
+
+Tests:
+
+    Test - value is a positive integer
+        >>> integer_validator("my_int", 12)
+        Traceback (most recent call last):
+        ...
+        NameError: name 'e' is not defined
+    
+    Test - value is a negative integer
+        >>> integer_validator("my_int", -12)
+        Traceback (most recent call last):
+        ...
+        ValueError: my_int must be greater than 0
+
+    Test - value is a string
+        >>> integer_validator("my_int", "hey")
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+    
+    Test - value is 0
+        >>> integer_validator("my_int", 0)
+        Traceback (most recent call last):
+        ...
+        raise ValueError(f"{name} must be greater than 0")
+    
+    Test - value is infinete 
+        >>> integer_validator("my_int", "inf")
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+
+
+
+
+
