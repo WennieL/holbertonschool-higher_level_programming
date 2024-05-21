@@ -8,5 +8,5 @@ class BaseGeometry:
     '''This is an empty class'''
 
     def area(self):
-
+        '''areais not yet implemented'''
         raise Exception("area() is not implemented")
