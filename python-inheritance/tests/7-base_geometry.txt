@@ -10,6 +10,11 @@ First import ``BaseGeometry`` from the ``7-base_geometry`` module:
 
 Tests:
 
+Test - area()
+    	>>> bg.area()
+        Traceback (most recent call last):
+        ...
+        Exception: area() is not implemented
 
 Test for positive, negative and 0 integer
 
@@ -42,15 +47,21 @@ Test for different data structure
         Traceback (most recent call last):
         ...
         TypeError: age must be an integer
+    
+        Test - checking passing value a "list" with one value
+        >>> bg.integer_validator("age", [3])
+        Traceback (most recent call last):
+        ...
+        TypeError: age must be an integer
+
+
+Testing passing value with "string", "None", "bool", "missing one value"
 
         Test - checking passing value a stirng
     	>>> bg.integer_validator("name", "John")
         Traceback (most recent call last):
         ...
         TypeError: name must be an integer
-
-
-Testing passing value with "string", "None", "bool", "missing one value"
 
     Test - checking a value is None
         >>> bg.integer_validator("age", None)
