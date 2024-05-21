@@ -33,5 +33,6 @@ class Rectangle(BaseGeometry):
     '''Rectangle inherits from BaseGeometry'''
 
     def __init__(self, width, height):
+        '''Instantiation with width and height'''
         self.__width = width
         self.__height = height
