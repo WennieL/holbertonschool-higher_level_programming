@@ -9,10 +9,10 @@ and how Python determines method resolution order.
 
 
 class Fish:
-     '''Defines a Fish class'''
+    '''Defines a Fish class'''
 
     def swim(self):
-        '''swom method'''
+        '''swim method'''
         print("The fish is swimming")
 
     def habitat(self):
