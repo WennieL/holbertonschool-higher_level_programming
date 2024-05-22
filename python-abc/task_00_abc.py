@@ -19,7 +19,8 @@ class Dog(Animal):
     '''This is a subclass of Animal representing a dog'''
 
     def sound(self):
-        '''the sound method for the Dog class and
+        '''
+        the sound method for the Dog class and
         it returns the string “Bark”.
         '''
         return "Bark"
@@ -29,7 +30,8 @@ class Cat(Animal):
     '''This is a subclass of Animal representing a cat'''
 
     def sound(self):
-        '''the sound method for the Cat class and
+        '''
+        the sound method for the Cat class and
         it returns the string “Meow”.
         '''
         return "Meow"
