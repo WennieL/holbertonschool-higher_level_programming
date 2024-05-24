@@ -7,6 +7,12 @@ message every time an item is added
 (using the append or extend methods) 
 or removed (using the remove or pop methods).
 '''
+# Notes to myself:
+# When you create an instance of a subclass that inherits from a built-in type,
+# Python automatically invokes the appropriate constructor of the parent class.
+# This initialization process is handled internally by Python,
+# so you don't need to explicitly call super().__init__ in your subclass,
+# unless you need to perform additional initialization beyond what the parent class provides.
 
 
 class VerboseList(list):
@@ -29,9 +35,11 @@ class VerboseList(list):
 
     def pop(self, index=None):
         '''Pops an item from the list and prints a message'''
+        # Nores to myslef:
+        # pop(): removes an item at the specified index from the list.
         if index is None:
             item = super().pop()
-            print("Popped [{}] from the list.".format(item))
         else:
             item = super().pop(index)
-            print("Popped [{}] from the list.".format(item))
+        print("Popped [{}] from the list.".format(item))
+        return item
