@@ -24,7 +24,7 @@ class Circle(Shape):
     '''This is a subclass of Shape'''
 
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         '''returns the value of the area of a Circle'''
