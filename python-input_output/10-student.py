@@ -1,16 +1,18 @@
 #!/usr/bin/python3
-'''This module is based on 9-student.py'''
+"""
+Defines a student by their first name, last name, and age.
+"""
 
 
 class Student:
-    '''
-    Creates a class
+    """
+    Initializes a Student instance with the given attribute
 
     Args:
-        first_name: first attribute
-        last_name: second attribute
-        age: thirdattribute
-    '''
+        first_name (str): The first name of the student.
+        last_name (str): The last name of the student.
+        age (int): The age of the student.
+    """
 
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
