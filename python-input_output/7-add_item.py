@@ -10,7 +10,7 @@ filename = "add_item.json"
 
 data = []
 
-if os.path.isfile(filename):
+if os.path.exists(filename):
     data = load_from_json_file(filename)
 
 data.extend(sys.argv[1:])
