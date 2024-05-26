@@ -34,8 +34,8 @@ class CustomObject:
         instance of the object and save it to the provided filename.
         '''
         try:
-            with open(filename, "wb") as jfile:
-                pickle.dump(self, jfile)
+            with open(filename, "wb") as file:
+                pickle.dump(self, file)
         except Exception as e:
             print(f"{e}")
 
@@ -47,8 +47,8 @@ class CustomObject:
         of the CustomObject from the provided filename.
         '''
         try:
-            with open(filename, "rb") as pyfile:
-                return pickle.load(pyfile)
+            with open(filename, "rb") as file:
+                return pickle.load(file)
         except (FileNotFoundError, pickle.UnpicklingError) as e:
             print(f"{e}")
             return None
