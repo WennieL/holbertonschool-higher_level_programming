@@ -2,7 +2,7 @@
 '''
 This module uses pickle to serialize and deserialize custom Python objects
 '''
-import json
+
 import pickle
 
 
