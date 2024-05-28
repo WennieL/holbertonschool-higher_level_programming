@@ -52,3 +52,5 @@ class CustomObject:
         except (FileNotFoundError, pickle.UnpicklingError) as e:
             print(f"{e}")
             return None
+        except IOError as e:
+            print(f"{e}")
