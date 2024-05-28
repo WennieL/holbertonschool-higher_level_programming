@@ -18,4 +18,4 @@ def save_to_json_file(my_obj, filename):
     except PermissionError as e:
         print(f"[PermissionError] {e}")
     except TypeError as e:
-        print(f"{e}")
+        print(f"[TypeError] {e}")
