@@ -46,7 +46,7 @@ class MyHTTPHandler(BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
 
-            self.wfile.write("404 Not Found", "utf-8")
+            self.wfile.write(bytes("404 Not Found", "utf-8"))
 
 
 server = HTTPServer((HOST, PORT), MyHTTPHandler)
