@@ -41,7 +41,7 @@ def add_user():
     username = user_data.get("username")
 
     # Check if the 'username' field is missing
-    if "username" not in user_data:
+    if username not in user_data:
         return jsonify({"error": "Username is required"}), 400
 
     # Check if the username already exists
