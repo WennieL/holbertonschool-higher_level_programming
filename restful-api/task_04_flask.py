@@ -37,12 +37,13 @@ def get_user(username):
 @app.route("/add_user", methods=["POST"])
 def add_user():
     '''Add new user'''
-    user_data = request.json
-    username = user_data.get("username")
+    user_data = request.get_json()
 
     # Check if the 'username' field is missing
-    if username not in user_data:
+    if "username" not in user_data:
         return jsonify({"error": "Username is required"}), 400
+
+    username = user_data.get("username")
 
     # Check if the username already exists
     if username in users:
