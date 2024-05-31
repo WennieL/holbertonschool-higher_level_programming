@@ -46,10 +46,12 @@ def get_user(username):
         return jsonify({"error": "User not found"}), 404
 
 
-@app.route("/add_user", methods=['POST'])
+@app.route("/add_user", methods=["POST"])
 def add_user():
     '''Add new user'''
     user_data = request.get_json()
+    if user_data is None:
+        return jsonify({"error": "Not a JSON file"})
 
     # Check if the 'username' field is missing
     if "username" not in user_data:
