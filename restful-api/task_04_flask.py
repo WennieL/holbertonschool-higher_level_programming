@@ -41,7 +41,7 @@ def add_user():
     username = user_data.get("username")
 
     if username in users:
-        return jsonify({"message": "User exists in the users"}), 409
+        return jsonify({"message": "User already exists"}), 409
 
     # users[username] = user_data
     users[username] = {
@@ -55,4 +55,4 @@ def add_user():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
