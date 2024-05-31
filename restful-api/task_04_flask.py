@@ -40,6 +40,9 @@ def add_user():
     user_data = request.json
     username = user_data.get("username")
 
+    if username in users:
+        return jsonify({"message": "User exists in the users"}), 409
+
     # users[username] = user_data
     users[username] = {
         "username": username,
