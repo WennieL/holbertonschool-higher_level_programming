@@ -16,23 +16,22 @@ if __name__ == "__main__":
         database=sys.argv[3],
     )
 
+    cursor = db.cursor()
+
     query = """
-        SELECT cities.id, cities.name, states.name
+        SELECT cities.name
         FROM cities
-        LEFT JOIN states
+        JOIN states
         ON cities.state_id = states.id
-        WHERE BINARY states.name = %s
+        WHERE states.name = %s
         ORDER BY cities.id ASC
     """
 
-    state_name = sys.argv[4]
+    cursor.execute(query, (sys.argv[4],))
+    result = cursor.fetchall()
 
-    with db.cursor() as cursor:
-        cursor.execute(query, (state_name,))
-        result = cursor.fetchall()
-
-        for row in result:
-            print(row)
+    for row in result:
+        print(row[0])
 
     cursor.close()
     db.close()
