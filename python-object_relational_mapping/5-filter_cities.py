@@ -30,8 +30,8 @@ if __name__ == "__main__":
     cursor.execute(query, (sys.argv[4],))
     result = cursor.fetchall()
 
-    for row in result:
-        print(row[0])
+    if result:
+        print(",".join(row[0] for row in result))
 
     cursor.close()
     db.close()
