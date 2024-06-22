@@ -17,13 +17,18 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
+    # %s => This is crucial for preventing SQL injection because
+    # it ensures that user input is treated purely as data,
+    # not executable SQL code.
     query = """
         SELECT *
         FROM states
         WHERE BINARY name = %s
         ORDER BY id ASC
     """
-
+    # In Python, when using MySQLdb or similar database libraries that
+    # support parameterized queries, like %s placeholders,
+    # typically provide the parameters to be substituted into the query as a tuple(immutability).
     cursor.execute(query, (sys.argv[4],))
     result = cursor.fetchall()
 
