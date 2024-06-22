@@ -12,7 +12,8 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    connection_string = f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
+    connection_string = f"mysql+mysqldb://{username}:\
+        {password}@localhost:3306/{db_name}"
 
     engine = create_engine(connection_string, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
