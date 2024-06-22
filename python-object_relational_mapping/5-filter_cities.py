@@ -17,6 +17,7 @@ if __name__ == "__main__":
     )
 
     cursor = db.cursor()
+    state_name = sys.argv[4]
 
     query = """
         SELECT cities.name
@@ -27,12 +28,14 @@ if __name__ == "__main__":
         ORDER BY cities.id ASC
     """
 
-    cursor.execute(query, (sys.argv[4],))
+    cursor.execute(query, (state_name,))
     result = cursor.fetchall()
 
     if result:
         cities = [row[0] for row in result]
         print(", ".join(cities))
+    else:
+        print("")
 
     cursor.close()
     db.close()
