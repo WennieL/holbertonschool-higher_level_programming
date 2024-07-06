@@ -2,10 +2,17 @@
 
 from flask import Flask, render_template
 import json
+import os
 
-app = Flask(__name__)
+# Path to the shared templates directory
+template_dir = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'templates'))
 
-app.static_folder = 'static'
+# Path to the shared static directory
+static_dir = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'static'))
+
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 
 @app.route('/')
@@ -23,7 +30,7 @@ def about():
 def items():
     items_list = []
 
-    with open("./items.json", "r", encoding="utf-8") as jfile:
+    with open("./task_02/items.json", "r", encoding="utf-8") as jfile:
         data = json.load(jfile)
 
     for key, value in data.items():

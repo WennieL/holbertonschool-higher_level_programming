@@ -1,10 +1,16 @@
 #!/usr/bin/python3
 
 from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+# Path to the shared templates directory
+template_dir = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'templates'))
+# Path to the shared static directory
+static_dir = os.path.abspath(os.path.join(
+    os.path.dirname(__file__), '..', 'static'))
 
-app.static_folder = 'static'
+app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
 
 
 @app.route('/')
