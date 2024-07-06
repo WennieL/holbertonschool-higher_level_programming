@@ -1,0 +1,22 @@
+{# templates/about.html #}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <h1>About Me</h1>
+    <p>Here are my social media sites:</p>
+    <ul style="color: rgb(219, 153, 240); list-style: none;">
+        {% for social in sites %}
+        <li>{{ social }}</li>
+        {% endfor %}
+    </ul>
+    {% include 'footer.html' %}
+</body>
+</html>
