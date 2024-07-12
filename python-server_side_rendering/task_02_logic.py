@@ -2,17 +2,8 @@
 
 from flask import Flask, render_template
 import json
-import os
 
-# Path to the shared templates directory
-template_dir = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', 'templates'))
-
-# Path to the shared static directory
-static_dir = os.path.abspath(os.path.join(
-    os.path.dirname(__file__), '..', 'static'))
-
-app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -20,30 +11,18 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/about')
-def about():
-    sites = ["twitter", "facebook", "instagram"]
-    return render_template('about.html', sites=sites)
-
-
 @app.route('/items')
 def items():
     items_list = []
 
-    # json to python -> readable to items.html
-    with open("./task_02/items.json", "r", encoding="utf-8") as jfile:
-        data = json.load(jfile)
-
-    for key, value in data.items():
-        items_list.extend(value)
+    with open("items.json", 'r') as f:
+        rows = json.load(f)
+    for key, value in rows.items():
+        items_list = value
 
     return render_template('items.html', items=items_list)
 
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html')
-
-
+# Set debug=True for the server to auto-reload when there are changes
 if __name__ == '__main__':
-    app.run(host="localhost", debug=True, port=3000)
+    app.run(host='localhost', port=5000, debug=True)
