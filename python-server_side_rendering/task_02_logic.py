@@ -30,6 +30,7 @@ def about():
 def items():
     items_list = []
 
+    # json to python -> readable to items.html
     with open("./task_02/items.json", "r", encoding="utf-8") as jfile:
         data = json.load(jfile)
 
