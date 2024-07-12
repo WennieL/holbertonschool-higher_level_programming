@@ -1,40 +1,83 @@
-{# templates/product_display.html #}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Product Display</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App - Task 03</title>
+    <style>
+        html, body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
+        body > .main {
+            background-color: #99FFFF;
+            padding: 20px 0 40px 0;
+        }
+
+        body > .main table{
+            width: 350px;
+            margin: 0 auto;
+            border-spacing: 0;
+            background-color: #FFF;
+            border: 1px solid #CCC;
+        }
+
+        body > .main table > thead td {
+            font-weight: bold;
+            border-bottom: 1px solid #CCC;
+        }
+
+        body > .main table td{
+            padding: 5px;
+        }
+
+        header {
+            color: blue;
+            text-shadow: 2px 2px 5px #666;
+            font-size: 48px;
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            border-top: 1px solid #CCC;
+        }
+    </style>
+</head>
 <body>
     {% include 'header.html' %}
-    <h1>Welcome to myShop - Products Page!</h1>
-    <div>
-        {% if error %}
-            <p style="color: red; font-weight: bold;">{{ error }}</p>
-        {% else %}
-            <table>
-                <thead>
-                    <tr>
-                        <td style="color: white;">ID</td>
-                        <td style="color: white;">Name</td>
-                        <td style="color: white;">Category</td>
-                        <td style="color: white;">Price</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for product in data %}
-                    <tr>
-                        <td style="color: white;">{{ product.id }}</td>
-                        <td style="color: white;">{{ product.name }}</td>
-                        <td style="color: white;">{{ product.category }}</td>
-                        <td style="color: white;">{{ product.price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <h1>Products table</h1>
+    <div class="main">
+        <h2>List of items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{row["id"]}}</td>
+                    <td>{{row["name"]}}</td>
+                    <td>{{row["category"]}}</td>
+                    <td>{{row["price"]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if source not in ['json', 'csv'] %}
+        <h1>Wrong source</h1>
+        {% endif %}
+        {% if id and data|length == 0 %}
+        <h1>Product not found</h1>
         {% endif %}
     </div>
     {% include 'footer.html' %}

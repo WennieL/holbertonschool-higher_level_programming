@@ -1,16 +1,38 @@
-{# templates/contact.html #}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Contact</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+    <style>
+        html, body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            color: blue;
+            text-shadow: 2px 2px 5px #666;
+            font-size: 48px;
+        }
+
+        footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            text-align: center;
+            border-top: 1px solid #CCC;
+        }
+
+        body > ul {
+            width: 240px;
+            margin: 0 auto;
+            text-align: left;
+        }
+    </style>
+    <title>My Flask App - Contact Us</title>
+</head>
 <body>
     {% include 'header.html' %}
-    <h1>Welcome to contact me!</h1>
+    <h1>This is the 'Contact Us' page</h1>
     {% include 'footer.html' %}
 </body>
 </html>
