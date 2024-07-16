@@ -16,5 +16,5 @@ fetch("https://swapi-api.hbtn.io/api/films/?format=json")
     }
   })
   .catch((error) => {
-    console.error('Fetch problem: ${error.message');
+    console.error(`Fetch problem: ${error.message}`);
   })

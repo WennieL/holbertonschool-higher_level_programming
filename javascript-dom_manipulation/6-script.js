@@ -10,4 +10,4 @@ fetch("https://swapi-api.hbtn.io/api/people/5/?format=json")
   .then((json) => {
     character.textContent = json.name;
   })
-  .catch((error) => console.error('Fetch problem: ${error.message'));
+  .catch((error) => console.error(`Fetch problem: ${error.message}`));

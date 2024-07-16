@@ -11,5 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((json) => {
       hello.textContent = json.hello;
     })
-    .catch((error) => console.error('Fetch problem: ${error.message}'));
+    .catch((error) => console.error(`Fetch problem: ${error.message}`));
 });
