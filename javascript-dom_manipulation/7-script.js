@@ -3,7 +3,7 @@ let list_movies = document.getElementById("list_movies");
 fetch("https://swapi-api.hbtn.io/api/films/?format=json")
   .then((response) => {
     if(!response.ok) {
-      throw new Error('HTTP error: ${response.status');
+      throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
